@@ -3,13 +3,13 @@ from openai import OpenAI
 import time
 import re
 import requests
-
-OPENAI_KEY="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" #Your OpenAI API Key 
-
+from dotenv import load_dotenv
+load_dotenv()
 # # Connect to Open AI
 # api_key = os.environ["OPENAI_API_KEY"]
 # client = OpenAI()
-client = OpenAI(api_key=OPENAI_KEY)
+    
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 # # Connect to the Assistant
 # assistant_id = os.environ["OPENAI_ASSISTANT_ID_NA"]

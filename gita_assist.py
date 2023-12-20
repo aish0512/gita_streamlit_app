@@ -3,13 +3,12 @@ import streamlit as st
 # from audiorecorder import audiorecorder
 import os
 from openai import OpenAI
-
+import openai
 from gita import *
+from dotenv import load_dotenv
+load_dotenv()
 
-# Set OpenAI API key and initialize client for speech to text - whisper
-OPENAI_KEY="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" #Your OpenAI API Key 
-
-client = OpenAI(api_key=OPENAI_KEY)
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def stick_header():
 
