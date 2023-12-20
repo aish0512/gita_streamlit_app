@@ -1,5 +1,5 @@
 streamlit
-dotenv
+python-dotenv
 openai==1.6.0
 Pillow==9.4.0
 Requests==2.31.0
